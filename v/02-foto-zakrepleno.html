@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>02 · Фото закреплено, текст сменяется · О компании</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+.v2 .stage{background:var(--paper)}
+.v2.is-anim .pic{position:absolute;left:0;top:0;width:46%;height:100%;margin:0;overflow:hidden;clip-path:inset(0 100% 0 0)}
+.v2 .pic img{width:100%;height:100%;object-fit:cover;transform-origin:50% 60%}
+.v2 .pic figcaption{position:absolute;left:16px;bottom:16px;background:rgba(15,21,53,.7);color:#fff;font-size:13px;padding:6px 10px;border-radius:8px}
+.v2.is-anim .col{position:absolute;left:calc(46% + 72px);right:calc(var(--pad) + 40px);top:16vh}
+.v2.is-anim .steps{position:relative;margin-top:32px}.v2.is-anim .step{position:absolute;left:0;right:0;top:0}
+.v2 .hl{transition:color .4s}.v2 .step:not(.lit) .hl{color:var(--ink)}
+@media (max-width:760px){.v2.is-anim .pic{width:100%;height:38%}.v2.is-anim .col{left:var(--pad);top:calc(38% + 24px)}}
+</style>
+</head>
+<body>
+<header class="lab-top"><div class="wrap"><a href="../" aria-label="Все варианты"><img src="../assets/img/logo.svg" alt="Bolashak" width="92" height="30"></a><nav><a href="../">Все 15 вариантов</a><a href="01-bolshaya-cifra.html">← 01</a><a href="03-stopka-kartochek.html">03 →</a></nav></div></header>
+<main>
+<section class="intro"><div class="wrap"><h1>02 · Фото закреплено, текст сменяется</h1><p class="how">Фотография Астаны раскрывается шторкой и стоит на месте, медленно приближаясь. Справа по одному въезжают абзацы, выделенные слова загораются синим.</p><a class="ref" href="https://www.awwwards.com/sites/serein-wealth" target="_blank" rel="noopener">Пример на Awwwards: Serein Wealth ↗</a><p class="hint"><i aria-hidden="true"></i>Прокрутите вниз: блок закрепится и покажет историю в четыре шага</p></div></section>
+<section class="story v2" aria-label="О компании"><div class="stage">
+<figure class="pic deco"><img src="../assets/img/astana.webp" alt="" loading="lazy" decoding="async"><figcaption>Фото: Ken and Nyetta, CC BY 2.0, кадрировано</figcaption></figure><div class="col"><h2 class="head">О компании</h2><div class="steps"><div class="step s0"><p class="para">Постановлением Правительства Республики Казахстан от <strong class="hl">4 апреля 2005 года</strong> <strong class="hl">№301</strong> создано акционерное общество «Центр международных программ» со <strong class="hl">100-процентным участием государства</strong> в уставном капитале.</p></div><div class="step s1"><p class="para">Акционером АО «Центр международных программ» является <strong class="hl">министерство науки и высшего образования</strong>.</p></div><div class="step s2"><p class="para">Определить основным предметом деятельности АО «ЦМП» - осуществление комплекса мероприятий по международным программам подготовки, переподготовки и повышения квалификации кадров за рубежом, в том числе <strong class="hl">международной стипендии Президента Республики Казахстан «Болашак»</strong>.</p></div><div class="step s3"><p class="para">АО «Центр международных программ» администрирует <strong class="hl">программу «Болашак», научные стажировки, а также межправительственные гранты</strong>. Центром проводится <strong class="hl">прием документов, конкурсный отбор</strong>.</p><a class="more" href="https://stellasdeutsch-dev.github.io/bolashak-site/ru/o-kompanii/">Подробнее</a></div></div></div>
+<div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</div></section>
+<section class="after"><div class="wrap"><nav class="pager" aria-label="Другие варианты"><a href="01-bolshaya-cifra.html"><small>Предыдущий</small><strong>01 · Большая цифра на месте</strong></a><a href="03-stopka-kartochek.html"><small>Следующий</small><strong>03 · Стопка карточек</strong></a></nav>
+<p class="credits">Тексты блока — с bolashak.gov.kz, слово в слово. Фото Астаны: <a href="https://commons.wikimedia.org/wiki/File:Central_Downtown_Astana_pamorama.jpg">Ken and Nyetta</a>, CC BY 2.0, кадрировано; фото кампуса, глобуса, библиотеки — CC0; остальные фото — с сайта Центра. Анимации выключаются при настройке «уменьшить движение».</p></div></section>
+</main>
+<script src="../assets/gsap.min.js"></script>
+<script src="../assets/ScrollTrigger.min.js"></script>
+<script src="../assets/story.js"></script>
+<script>
+Story.run(({tl,story,stage,split,count,at,swap,steps,q,one})=>{
+gsap.to(one('.pic'),{clipPath:'inset(0 0% 0 0)',duration:1.1,ease:'power3.inOut',delay:.1});gsap.from(one('.pic img'),{scale:1.25,duration:1.6,ease:'power3.out',delay:.1});
+setTimeout(()=>steps[0].classList.add('lit'),900);
+tl.to(one('.pic img'),{scale:1.22,duration:4,ease:'none'},0);
+for(let k=1;k<4;k++){swap(k,60);tl.call(()=>{steps.forEach((s,i)=>s.classList.toggle('lit',i<=k))},null,at(k)+.5)}
+})
+</script>
+</body>
+</html>

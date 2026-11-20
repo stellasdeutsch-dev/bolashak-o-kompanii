@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>04 · Линия времени с прогрессом · О компании</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+.v4.is-anim .head{position:absolute;left:var(--pad);top:9vh}
+.v4 .rail{position:absolute;left:calc(var(--pad) + 90px);top:22vh;height:60vh;width:4px;background:var(--line);border-radius:2px}
+.v4 .fill{position:absolute;inset:0;background:var(--ind);border-radius:2px;transform-origin:50% 0;transform:scaleY(0)}
+.v4 .dot{position:absolute;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--soft);box-shadow:0 0 0 4px #fff}
+.v4 .d0{top:-9px}.v4 .d1{top:calc(33.3% - 9px)}.v4 .d2{top:calc(66.6% - 9px)}.v4 .d3{top:calc(100% - 9px)}
+.v4 .year{position:absolute;right:28px;top:-22px;font-size:clamp(26px,3vw,44px);font-weight:800;color:var(--ind)}
+.v4.is-anim .step{position:absolute;left:calc(var(--pad) + 150px);right:calc(var(--pad) + 40px);top:calc(22vh - 10px);max-width:900px}
+.v4 .done{position:absolute;left:calc(var(--pad) + 150px);right:calc(var(--pad) + 40px);top:22vh}
+.v4 .done p{position:absolute;left:0;right:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--mute);font-size:15px;opacity:0}
+.v4 .done p:nth-child(1){top:0}.v4 .done p:nth-child(2){top:20vh}.v4 .done p:nth-child(3){top:40vh}
+@media (max-width:760px){.v4 .rail{left:calc(var(--pad) + 6px);top:26vh;height:56vh}.v4 .year{right:auto;left:-6px;top:-48px;font-size:24px}.v4.is-anim .step{left:calc(var(--pad) + 36px);top:calc(26vh - 10px)}.v4 .done{display:none}}
+</style>
+</head>
+<body>
+<header class="lab-top"><div class="wrap"><a href="../" aria-label="Все варианты"><img src="../assets/img/logo.svg" alt="Bolashak" width="92" height="30"></a><nav><a href="../">Все 15 вариантов</a><a href="03-stopka-kartochek.html">← 03</a><a href="05-foto-raskryvaetsya.html">05 →</a></nav></div></header>
+<main>
+<section class="intro"><div class="wrap"><h1>04 · Линия времени с прогрессом</h1><p class="how">Вертикальная линия заполняется синим по мере прокрутки. Точки вспыхивают, текущая становится жёлтым кольцом, абзац въезжает напротив неё, прочитанные остаются одной строкой.</p><a class="ref" href="https://www.awwwards.com/sites/hanwag-100-years-timeline" target="_blank" rel="noopener">Пример на Awwwards: Hanwag 100 Years ↗</a><p class="hint"><i aria-hidden="true"></i>Прокрутите вниз: блок закрепится и покажет историю в четыре шага</p></div></section>
+<section class="story v4" aria-label="О компании"><div class="stage">
+<h2 class="head">О компании</h2><div class="rail deco"><i class="fill"></i><b class="dot d0"></b><b class="dot d1"></b><b class="dot d2"></b><b class="dot d3"></b><span class="year">2005</span></div><div class="step s0"><p class="para">Постановлением Правительства Республики Казахстан от <strong class="hl">4 апреля 2005 года</strong> <strong class="hl">№301</strong> создано акционерное общество «Центр международных программ» со <strong class="hl">100-процентным участием государства</strong> в уставном капитале.</p></div><div class="step s1"><p class="para">Акционером АО «Центр международных программ» является <strong class="hl">министерство науки и высшего образования</strong>.</p></div><div class="step s2"><p class="para">Определить основным предметом деятельности АО «ЦМП» - осуществление комплекса мероприятий по международным программам подготовки, переподготовки и повышения квалификации кадров за рубежом, в том числе <strong class="hl">международной стипендии Президента Республики Казахстан «Болашак»</strong>.</p></div><div class="step s3"><p class="para">АО «Центр международных программ» администрирует <strong class="hl">программу «Болашак», научные стажировки, а также межправительственные гранты</strong>. Центром проводится <strong class="hl">прием документов, конкурсный отбор</strong>.</p><a class="more" href="https://stellasdeutsch-dev.github.io/bolashak-site/ru/o-kompanii/">Подробнее</a></div><div class="done deco"><p>Постановлением Правительства Республики Казахстан от 4 апреля 2005 года №301 создано акционерное общество «Центр международных программ» со 100-процентным участием государства в уставном капитале.</p><p>Акционером АО «Центр международных программ» является министерство науки и высшего образования.</p><p>Определить основным предметом деятельности АО «ЦМП» - осуществление комплекса мероприятий по международным программам подготовки, переподготовки и повышения квалификации кадров за рубежом, в том числе международной стипендии Президента Республики Казахстан «Болашак».</p></div>
+<div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</div></section>
+<section class="after"><div class="wrap"><nav class="pager" aria-label="Другие варианты"><a href="03-stopka-kartochek.html"><small>Предыдущий</small><strong>03 · Стопка карточек</strong></a><a href="05-foto-raskryvaetsya.html"><small>Следующий</small><strong>05 · Фото раскрывается на весь экран</strong></a></nav>
+<p class="credits">Тексты блока — с bolashak.gov.kz, слово в слово. Фото Астаны: <a href="https://commons.wikimedia.org/wiki/File:Central_Downtown_Astana_pamorama.jpg">Ken and Nyetta</a>, CC BY 2.0, кадрировано; фото кампуса, глобуса, библиотеки — CC0; остальные фото — с сайта Центра. Анимации выключаются при настройке «уменьшить движение».</p></div></section>
+</main>
+<script src="../assets/gsap.min.js"></script>
+<script src="../assets/ScrollTrigger.min.js"></script>
+<script src="../assets/story.js"></script>
+<script>
+Story.run(({tl,story,stage,split,count,at,swap,steps,q,one})=>{
+const dots=q('.dot');gsap.set(dots[0],{background:'#fff',boxShadow:'0 0 0 6px var(--sun)',scale:1.3});
+gsap.from(one('.rail'),{scaleY:0,transformOrigin:'50% 0',duration:1,ease:'power3.out',delay:.1});
+tl.to(one('.fill'),{scaleY:1,duration:3,ease:'none'},.65);
+const ys=matchMedia('(max-width:760px)').matches?['0vh','0vh','0vh','0vh']:['0vh','20vh','40vh','60vh'];
+for(let k=1;k<4;k++){tl.to(dots[k-1],{background:'var(--ind)',boxShadow:'0 0 0 4px #fff',scale:1,duration:.2},at(k)+.2).to(dots[k],{background:'#fff',boxShadow:'0 0 0 6px var(--sun)',scale:1.3,duration:.3,ease:'back.out(3)'},at(k)+.25);
+tl.to(steps[k-1],{autoAlpha:0,duration:.25},at(k)).fromTo(steps[k],{autoAlpha:0,x:40,top:(matchMedia('(max-width:760px)').matches?'calc(26vh - 10px)':'calc(22vh - 10px + '+ys[k]+')')},{autoAlpha:1,x:0,duration:.45},at(k)+.2).to(q('.done p')[k-1],{opacity:1,duration:.3},at(k)+.2)}
+})
+</script>
+</body>
+</html>

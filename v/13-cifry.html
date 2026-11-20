@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>13 · Цифры на весь экран · О компании</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+.v13 .stage{background:var(--deep);color:#fff}.v13.is-anim .head{position:absolute;left:var(--pad);top:9vh;z-index:3}
+.v13 .step{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.v13.is-anim .step{position:absolute;left:var(--pad);right:calc(var(--pad) + 48px);top:22vh}
+.v13 .num b{display:block;font-size:min(14vw,200px);font-weight:800;line-height:1;letter-spacing:-.03em}.v13 .num span{display:block;margin-top:12px;font-size:20px;opacity:.75}
+.v13 .bar{display:block;margin-top:28px;height:10px;border-radius:5px;background:currentColor;position:relative;opacity:.9;background:rgba(201,207,234,.35)}.v13 .bar i{position:absolute;left:0;top:0;bottom:0;width:var(--w);background:var(--sun);border-radius:5px;transform-origin:0 50%}
+.v13 .side .para{font-size:clamp(17px,1.4vw,22px)}.v13 .light .hl{color:var(--ind)}.v13 .light .more{color:var(--ind)}
+@media (max-width:760px){.v13 .step{grid-template-columns:1fr;gap:20px}.v13.is-anim .step{top:18vh}}
+</style>
+</head>
+<body>
+<header class="lab-top"><div class="wrap"><a href="../" aria-label="Все варианты"><img src="../assets/img/logo.svg" alt="Bolashak" width="92" height="30"></a><nav><a href="../">Все 15 вариантов</a><a href="12-ot-globusa-k-adresu.html">← 12</a><a href="14-kollazh.html">14 →</a></nav></div></header>
+<main>
+<section class="intro"><div class="wrap"><h1>13 · Цифры на весь экран</h1><p class="how">Каждый шаг — одна цифра из блока «Болашак» в цифрах» во весь экран. Цифра набегает от нуля, полоса показывает долю от 13 011, фон переливается из синего в белый и обратно; рядом абзац о Центре.</p><a class="ref" href="https://www.awwwards.com/sites/eto-10-year-timeline-1" target="_blank" rel="noopener">Пример на Awwwards: Energy Trust Timeline ↗</a><p class="hint"><i aria-hidden="true"></i>Прокрутите вниз: блок закрепится и покажет историю в четыре шага</p></div></section>
+<section class="story v13 dark" aria-label="О компании"><div class="stage">
+<h2 class="head">О компании</h2><div class="step s0"><div class="num"><b data-v="13011">13 011</b><span>Подготовлено специалистов</span><i class="bar"><i style="--w:100.0%"></i></i></div><div class="side"><p class="para">Постановлением Правительства Республики Казахстан от <strong class="hl">4 апреля 2005 года</strong> <strong class="hl">№301</strong> создано акционерное общество «Центр международных программ» со <strong class="hl">100-процентным участием государства</strong> в уставном капитале.</p></div></div><div class="step s1"><div class="num"><b data-v="10585">10 585</b><span>Выпускников исполнили свои договорные обязательства</span><i class="bar"><i style="--w:81.4%"></i></i></div><div class="side"><p class="para">Акционером АО «Центр международных программ» является <strong class="hl">министерство науки и высшего образования</strong>.</p></div></div><div class="step s2"><div class="num"><b data-v="2300">2 300</b><span>Находятся на мониторинге трудовой отработки</span><i class="bar"><i style="--w:17.7%"></i></i></div><div class="side"><p class="para">Определить основным предметом деятельности АО «ЦМП» - осуществление комплекса мероприятий по международным программам подготовки, переподготовки и повышения квалификации кадров за рубежом, в том числе <strong class="hl">международной стипендии Президента Республики Казахстан «Болашак»</strong>.</p></div></div><div class="step s3"><div class="num"><b data-v="1132">1 132</b><span>Стипендиаты на мониторинге</span><i class="bar"><i style="--w:8.7%"></i></i></div><div class="side"><p class="para">АО «Центр международных программ» администрирует <strong class="hl">программу «Болашак», научные стажировки, а также межправительственные гранты</strong>. Центром проводится <strong class="hl">прием документов, конкурсный отбор</strong>.</p><a class="more" href="https://stellasdeutsch-dev.github.io/bolashak-site/ru/o-kompanii/">Подробнее</a></div></div>
+<div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</div></section>
+<section class="after"><div class="wrap"><nav class="pager" aria-label="Другие варианты"><a href="12-ot-globusa-k-adresu.html"><small>Предыдущий</small><strong>12 · От глобуса к адресу</strong></a><a href="14-kollazh.html"><small>Следующий</small><strong>14 · Коллаж собирается из фото</strong></a></nav>
+<p class="credits">Тексты блока — с bolashak.gov.kz, слово в слово. Фото Астаны: <a href="https://commons.wikimedia.org/wiki/File:Central_Downtown_Astana_pamorama.jpg">Ken and Nyetta</a>, CC BY 2.0, кадрировано; фото кампуса, глобуса, библиотеки — CC0; остальные фото — с сайта Центра. Анимации выключаются при настройке «уменьшить движение».</p></div></section>
+</main>
+<script src="../assets/gsap.min.js"></script>
+<script src="../assets/ScrollTrigger.min.js"></script>
+<script src="../assets/story.js"></script>
+<script>
+Story.run(({tl,story,stage,split,count,at,swap,steps,q,one})=>{
+const bs=q('.num b');
+const run=(k)=>{tl.add(count(bs[k],+bs[k].dataset.v,.45),k?at(k)+.25:0.02).from(steps[k].querySelector('.bar i'),{scaleX:0,duration:.6},k?at(k)+.25:0.02)};
+gsap.from(steps[0].querySelector('.bar i'),{scaleX:0,duration:1,ease:'power3.out',delay:.3});
+const bg=['#27346F','#FFFFFF','#27346F','#FFFFFF'],fg=['#fff','#0F1535','#fff','#0F1535'];
+for(let k=1;k<4;k++){tl.to(stage,{backgroundColor:bg[k],color:fg[k],duration:.4},at(k)).call(()=>{story.classList.toggle('dark',k%2===0);steps[k].classList.toggle('light',k%2===1)},null,at(k)+.2);swap(k);run(k)}
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>08 · Цветные шторки · О компании</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+.v8.is-anim .head{position:absolute;left:var(--pad);top:9vh;z-index:9;color:#fff;transition:color .3s}
+.v8 .panel{padding:64px var(--pad)}.v8.is-anim .panel{position:absolute;inset:0;display:flex;align-items:center;padding:0 calc(var(--pad) + 48px) 0 var(--pad)}
+.v8 .c0{background:var(--deep);color:#fff}.v8 .c1{background:var(--sun);color:var(--ink)}.v8 .c2{background:var(--ind);color:#fff}.v8 .c3{background:var(--paper);color:var(--ink)}
+.v8 .lead{font-size:clamp(24px,3vw,46px);font-weight:700;line-height:1.2;max-width:1150px}
+.v8 .c0 .hl,.v8 .c2 .hl{color:var(--sun)}.v8 .c1 .hl{color:var(--deep);font-weight:800}.v8 .c3 .hl{color:var(--ind)}
+.v8 .c1 .more,.v8 .c3 .more{color:var(--ind)}.v8 .w{display:inline-block}
+</style>
+</head>
+<body>
+<header class="lab-top"><div class="wrap"><a href="../" aria-label="Все варианты"><img src="../assets/img/logo.svg" alt="Bolashak" width="92" height="30"></a><nav><a href="../">Все 15 вариантов</a><a href="07-oglavlenie.html">← 07</a><a href="09-arhiv.html">09 →</a></nav></div></header>
+<main>
+<section class="intro"><div class="wrap"><h1>08 · Цветные шторки</h1><p class="how">Каждый абзац на своей цветной панели во весь экран. Новая панель поднимается снизу со скруглёнными углами, которые выпрямляются у верха; строки текста выезжают из-под маски.</p><a class="ref" href="https://www.awwwards.com/sites/bridgement" target="_blank" rel="noopener">Пример на Awwwards: Bridgement ↗</a><p class="hint"><i aria-hidden="true"></i>Прокрутите вниз: блок закрепится и покажет историю в четыре шага</p></div></section>
+<section class="story v8" aria-label="О компании"><div class="stage">
+<h2 class="head">О компании</h2><div class="step panel c0"><div class="in"><p class="lead">Постановлением Правительства Республики Казахстан от <strong class="hl">4 апреля 2005 года</strong> <strong class="hl">№301</strong> создано акционерное общество «Центр международных программ» со <strong class="hl">100-процентным участием государства</strong> в уставном капитале.</p></div></div><div class="step panel c1"><div class="in"><p class="lead">Акционером АО «Центр международных программ» является <strong class="hl">министерство науки и высшего образования</strong>.</p></div></div><div class="step panel c2"><div class="in"><p class="lead">Определить основным предметом деятельности АО «ЦМП» - осуществление комплекса мероприятий по международным программам подготовки, переподготовки и повышения квалификации кадров за рубежом, в том числе <strong class="hl">международной стипендии Президента Республики Казахстан «Болашак»</strong>.</p></div></div><div class="step panel c3"><div class="in"><p class="lead">АО «Центр международных программ» администрирует <strong class="hl">программу «Болашак», научные стажировки, а также межправительственные гранты</strong>. Центром проводится <strong class="hl">прием документов, конкурсный отбор</strong>.</p><a class="more" href="https://stellasdeutsch-dev.github.io/bolashak-site/ru/o-kompanii/">Подробнее</a></div></div>
+<div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</div></section>
+<section class="after"><div class="wrap"><nav class="pager" aria-label="Другие варианты"><a href="07-oglavlenie.html"><small>Предыдущий</small><strong>07 · Оглавление глав слева</strong></a><a href="09-arhiv.html"><small>Следующий</small><strong>09 · Архив: постановление как документ</strong></a></nav>
+<p class="credits">Тексты блока — с bolashak.gov.kz, слово в слово. Фото Астаны: <a href="https://commons.wikimedia.org/wiki/File:Central_Downtown_Astana_pamorama.jpg">Ken and Nyetta</a>, CC BY 2.0, кадрировано; фото кампуса, глобуса, библиотеки — CC0; остальные фото — с сайта Центра. Анимации выключаются при настройке «уменьшить движение».</p></div></section>
+</main>
+<script src="../assets/gsap.min.js"></script>
+<script src="../assets/ScrollTrigger.min.js"></script>
+<script src="../assets/story.js"></script>
+<script>
+Story.run(({tl,story,stage,split,count,at,swap,steps,q,one})=>{
+const pn=steps;gsap.set(pn.slice(1),{autoAlpha:1,yPercent:100,borderRadius:'40px 40px 0 0'});pn.forEach(p=>split(p.querySelector('.lead')));
+gsap.from(pn[0].querySelectorAll('.w'),{yPercent:100,opacity:0,stagger:.015,duration:.6,ease:'power3.out',delay:.2});
+const hc=['#fff','#0F1535','#fff','#0F1535'];
+for(let k=1;k<4;k++){tl.to(pn[k],{yPercent:0,borderRadius:'0px 0px 0 0',duration:.7,ease:'power3.inOut'},at(k)).to(pn[k-1],{yPercent:-12,duration:.7},at(k)).to(one('.head'),{color:hc[k],duration:.2},at(k)+.4).from(pn[k].querySelectorAll('.w'),{yPercent:100,opacity:0,stagger:.006,duration:.35},at(k)+.4)}
+})
+</script>
+</body>
+</html>

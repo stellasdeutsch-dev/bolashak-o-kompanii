@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11 · Слова загораются при прокрутке · О компании</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+.v11.is-anim .head{position:absolute;left:var(--pad);top:9vh}
+.v11 .lead{font-size:clamp(24px,3.1vw,46px);font-weight:700;line-height:1.22;max-width:1180px}
+.v11.is-anim .step{position:absolute;left:var(--pad);right:calc(var(--pad) + 48px);top:24vh}
+.v11.is-anim .w{color:var(--soft)}.v11.is-anim .hl{color:inherit}
+.v11 .done{position:absolute;left:var(--pad);right:calc(var(--pad) + 48px);top:16vh;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px}
+</style>
+</head>
+<body>
+<header class="lab-top"><div class="wrap"><a href="../" aria-label="Все варианты"><img src="../assets/img/logo.svg" alt="Bolashak" width="92" height="30"></a><nav><a href="../">Все 15 вариантов</a><a href="10-kolco.html">← 10</a><a href="12-ot-globusa-k-adresu.html">12 →</a></nav></div></header>
+<main>
+<section class="intro"><div class="wrap"><h1>11 · Слова загораются при прокрутке</h1><p class="how">Крупный текст абзаца сначала бледный; с прокруткой слова по одному становятся тёмными, ключевые — синими. Прочитанный абзац уезжает вверх и остаётся одной бледной строкой.</p><a class="ref" href="https://www.awwwards.com/sites/loop-industries" target="_blank" rel="noopener">Пример на Awwwards: Loop Industries ↗</a><p class="hint"><i aria-hidden="true"></i>Прокрутите вниз: блок закрепится и покажет историю в четыре шага</p></div></section>
+<section class="story v11" aria-label="О компании"><div class="stage">
+<h2 class="head">О компании</h2><p class="done deco"></p><div class="step s0"><p class="lead">Постановлением Правительства Республики Казахстан от <strong class="hl">4 апреля 2005 года</strong> <strong class="hl">№301</strong> создано акционерное общество «Центр международных программ» со <strong class="hl">100-процентным участием государства</strong> в уставном капитале.</p></div><div class="step s1"><p class="lead">Акционером АО «Центр международных программ» является <strong class="hl">министерство науки и высшего образования</strong>.</p></div><div class="step s2"><p class="lead">Определить основным предметом деятельности АО «ЦМП» - осуществление комплекса мероприятий по международным программам подготовки, переподготовки и повышения квалификации кадров за рубежом, в том числе <strong class="hl">международной стипендии Президента Республики Казахстан «Болашак»</strong>.</p></div><div class="step s3"><p class="lead">АО «Центр международных программ» администрирует <strong class="hl">программу «Болашак», научные стажировки, а также межправительственные гранты</strong>. Центром проводится <strong class="hl">прием документов, конкурсный отбор</strong>.</p><a class="more" href="https://stellasdeutsch-dev.github.io/bolashak-site/ru/o-kompanii/">Подробнее</a></div>
+<div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</div></section>
+<section class="after"><div class="wrap"><nav class="pager" aria-label="Другие варианты"><a href="10-kolco.html"><small>Предыдущий</small><strong>10 · Кольцо прогресса</strong></a><a href="12-ot-globusa-k-adresu.html"><small>Следующий</small><strong>12 · От глобуса к адресу</strong></a></nav>
+<p class="credits">Тексты блока — с bolashak.gov.kz, слово в слово. Фото Астаны: <a href="https://commons.wikimedia.org/wiki/File:Central_Downtown_Astana_pamorama.jpg">Ken and Nyetta</a>, CC BY 2.0, кадрировано; фото кампуса, глобуса, библиотеки — CC0; остальные фото — с сайта Центра. Анимации выключаются при настройке «уменьшить движение».</p></div></section>
+</main>
+<script src="../assets/gsap.min.js"></script>
+<script src="../assets/ScrollTrigger.min.js"></script>
+<script src="../assets/story.js"></script>
+<script>
+Story.run(({tl,story,stage,split,count,at,swap,steps,q,one})=>{
+const done=one('.done');steps.forEach(s=>split(s.querySelector('.lead')));
+for(let k=0;k<4;k++){const ws=[...steps[k].querySelectorAll('.w')];ws.forEach(w=>{const isHl=!!w.closest('.hl');tl.to(w,{color:isHl?'#384899':'#0F1535',duration:.05},k+.05+.8*ws.indexOf(w)/ws.length)});
+if(k){tl.to(steps[k-1],{autoAlpha:0,y:-60,duration:.25},k-.02).set(steps[k],{autoAlpha:1},k).call(()=>{done.textContent=steps[k-1].textContent.trim()},null,k).fromTo(done,{opacity:0},{opacity:1,duration:.2},k)}}
+})
+</script>
+</body>
+</html>

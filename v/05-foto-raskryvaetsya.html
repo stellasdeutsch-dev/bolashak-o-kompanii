@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>05 · Фото раскрывается на весь экран · О компании</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+.v5.is-anim .head{position:absolute;left:var(--pad);top:9vh;z-index:3;transition:color .3s}
+.v5 .win{position:absolute;left:50%;top:50%;width:38vw;height:22vw;border-radius:24px;overflow:hidden;z-index:1}
+.v5 .win img{width:100%;height:100%;object-fit:cover}.v5 .veil{position:absolute;inset:0;background:var(--deep);opacity:0}
+.v5.is-anim .step{position:absolute;left:var(--pad);right:calc(var(--pad) + 48px);z-index:3;max-width:960px}
+.v5.is-anim .s0{top:calc(50% + 11vw + 32px);left:31vw;right:31vw}.v5.is-anim .s1{top:calc(9vh + 64px);left:var(--pad)}
+.v5.is-anim .s2,.v5.is-anim .s3{top:20vh;color:#fff}.v5 .s2 .hl,.v5 .s3 .hl{color:var(--sun)}.v5 .s3 .more{color:var(--sun)}
+.v5 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}.v5 .stats b{display:block;font-size:clamp(28px,3vw,44px);font-weight:800}.v5 .stats span{font-size:14px;color:var(--soft)}
+@media (max-width:760px){.v5 .win{width:70vw;height:44vw}.v5.is-anim .s0{left:var(--pad);right:var(--pad);top:calc(50% + 22vw + 20px)}.v5 .stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="lab-top"><div class="wrap"><a href="../" aria-label="Все варианты"><img src="../assets/img/logo.svg" alt="Bolashak" width="92" height="30"></a><nav><a href="../">Все 15 вариантов</a><a href="04-liniya-vremeni.html">← 04</a><a href="06-ekran-popolam.html">06 →</a></nav></div></header>
+<main>
+<section class="intro"><div class="wrap"><h1>05 · Фото раскрывается на весь экран</h1><p class="how">Сначала фото — небольшое окно. С прокруткой окно растёт до всего экрана, на фото ложится ровный синий слой, текст становится белым, на последнем шаге цифры набегают от нуля.</p><a class="ref" href="https://www.awwwards.com/sites/atlas-by-vaonis" target="_blank" rel="noopener">Пример на Awwwards: Atlas by Vaonis ↗</a><p class="hint"><i aria-hidden="true"></i>Прокрутите вниз: блок закрепится и покажет историю в четыре шага</p></div></section>
+<section class="story v5" aria-label="О компании"><div class="stage">
+<h2 class="head">О компании</h2><div class="win deco"><img src="../assets/img/astana.webp" alt=""><i class="veil"></i></div><div class="step s0"><p class="para">Постановлением Правительства Республики Казахстан от <strong class="hl">4 апреля 2005 года</strong> <strong class="hl">№301</strong> создано акционерное общество «Центр международных программ» со <strong class="hl">100-процентным участием государства</strong> в уставном капитале.</p></div><div class="step s1"><p class="para">Акционером АО «Центр международных программ» является <strong class="hl">министерство науки и высшего образования</strong>.</p></div><div class="step s2"><p class="para">Определить основным предметом деятельности АО «ЦМП» - осуществление комплекса мероприятий по международным программам подготовки, переподготовки и повышения квалификации кадров за рубежом, в том числе <strong class="hl">международной стипендии Президента Республики Казахстан «Болашак»</strong>.</p></div><div class="step s3"><p class="para">АО «Центр международных программ» администрирует <strong class="hl">программу «Болашак», научные стажировки, а также межправительственные гранты</strong>. Центром проводится <strong class="hl">прием документов, конкурсный отбор</strong>.</p><div class="stats"><div><b data-v="13011">13 011</b><span>Подготовлено специалистов</span></div><div><b data-v="10585">10 585</b><span>Выпускников исполнили свои договорные обязательства</span></div><div><b data-v="2300">2 300</b><span>Находятся на мониторинге трудовой отработки</span></div><div><b data-v="1132">1 132</b><span>Стипендиаты на мониторинге</span></div></div><a class="more" href="https://stellasdeutsch-dev.github.io/bolashak-site/ru/o-kompanii/">Подробнее</a></div>
+<div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</div></section>
+<section class="after"><div class="wrap"><nav class="pager" aria-label="Другие варианты"><a href="04-liniya-vremeni.html"><small>Предыдущий</small><strong>04 · Линия времени с прогрессом</strong></a><a href="06-ekran-popolam.html"><small>Следующий</small><strong>06 · Экран пополам, фото меняется</strong></a></nav>
+<p class="credits">Тексты блока — с bolashak.gov.kz, слово в слово. Фото Астаны: <a href="https://commons.wikimedia.org/wiki/File:Central_Downtown_Astana_pamorama.jpg">Ken and Nyetta</a>, CC BY 2.0, кадрировано; фото кампуса, глобуса, библиотеки — CC0; остальные фото — с сайта Центра. Анимации выключаются при настройке «уменьшить движение».</p></div></section>
+</main>
+<script src="../assets/gsap.min.js"></script>
+<script src="../assets/ScrollTrigger.min.js"></script>
+<script src="../assets/story.js"></script>
+<script>
+Story.run(({tl,story,stage,split,count,at,swap,steps,q,one})=>{
+const win=one('.win');gsap.set(win,{xPercent:-50,yPercent:-50});gsap.from(win,{scale:.6,opacity:0,duration:1,ease:'power3.out',delay:.1});
+tl.to(win,{width:'64vw',height:'44vh',top:'62%',duration:.7},at(1)).to(win,{width:'100vw',height:'100vh',top:'50%',borderRadius:0,duration:.7},at(2)).to(one('.veil'),{opacity:.85,duration:.5},at(2)+.2).to(one('.head'),{color:'#fff',duration:.3},at(2)+.2).to(one('.win img'),{scale:1.15,duration:1.5,ease:'none'},at(2));
+for(let k=1;k<4;k++)swap(k);
+q('.stats b').forEach((b,i)=>tl.add(count(b,+b.dataset.v,.4),at(3)+.3+i*.06))
+})
+</script>
+</body>
+</html>
